@@ -1,0 +1,18 @@
+{
+  "name": "game-stake-monorepo",
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev:fe": "cd frontend && npm run dev",
+    "dev:be": "cd backend && npm run dev",
+    "test:be": "cd backend && npm run test",
+    "build:fe": "cd frontend && npm run build",
+    "deploy:be": "cd backend && npm run deploy"
+  }
+}
