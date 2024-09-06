@@ -2,7 +2,7 @@
   {
     "name": "Lionel Messi NFT",
     "description": "NFT representando a Lionel Messi, uno de los mejores futbolistas de todos los tiempos.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/messi.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/messi.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Forward" },
@@ -15,7 +15,7 @@
   {
     "name": "Cristiano Ronaldo NFT",
     "description": "NFT representando a Cristiano Ronaldo, un futbolista legendario conocido por su velocidad y habilidades.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/ronaldo.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/ronaldo.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Forward" },
@@ -28,7 +28,7 @@
   {
     "name": "Neymar Jr. NFT",
     "description": "NFT representando a Neymar Jr., un delantero brasileño conocido por su estilo de juego creativo.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/neymar.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/neymar.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Forward" },
@@ -41,7 +41,7 @@
   {
     "name": "Kylian Mbappé NFT",
     "description": "NFT representando a Kylian Mbappé, uno de los futbolistas jóvenes más rápidos y talentosos.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kylian.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kylian.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Forward" },
@@ -54,7 +54,7 @@
   {
     "name": "Kevin De Bruyne NFT",
     "description": "NFT representando a Kevin De Bruyne, un centrocampista belga conocido por su precisión en los pases.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kevindebruy.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kevindebruy.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Midfielder" },
@@ -67,7 +67,7 @@
   {
     "name": "Angel Di Maria NFT",
     "description": "NFT representando a Angel Di Maria. Un delantero argentino con gran habilidad y velocidad.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/dimari.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/dimari.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Forward" },
@@ -80,7 +80,7 @@
   {
     "name": "Mohamed Salah NFT",
     "description": "NFT representando a Mohamed Salah, un delantero egipcio conocido por su velocidad y precisión.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/salah.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/salah.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Forward" },
@@ -93,7 +93,7 @@
   {
     "name": "Robert Lewandowski NFT",
     "description": "NFT representando a Robert Lewandowski, un delantero prolífico con un gran olfato de gol.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/lewandousky.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/lewandousky.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Forward" },
@@ -106,7 +106,7 @@
   {
     "name": "Sergio Ramos NFT",
     "description": "NFT representando a Sergio Ramos, un defensor icónico conocido por su liderazgo y habilidades defensivas.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/ramos.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/ramos.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Defender" },
@@ -119,7 +119,7 @@
   {
     "name": "Luka Modrić NFT",
     "description": "NFT representando a Luka Modrić, un centrocampista croata con habilidades técnicas sobresalientes.",
-    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/luka.jpg",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/luka.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "futbol" },
       { "trait_type": "Position", "value": "Midfielder" },
@@ -132,7 +132,7 @@
   {
     "name": "Muhammad Ali NFT",
     "description": "NFT representando a Muhammad Ali, una leyenda del boxeo conocido como 'El Más Grande'.",
-    "image": "ipfs://<CID_DE_LA_IMAGEN_ALI>",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/ali.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "Boxeo" },
       { "trait_type": "Weight Class", "value": "Heavyweight" },
@@ -145,7 +145,7 @@
   {
     "name": "Mike Tyson NFT",
     "description": "NFT representando a Mike Tyson, conocido por su increíble poder de golpeo y agresividad.",
-    "image": "ipfs://<CID_DE_LA_IMAGEN_TYSON>",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/mike.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "Boxeo" },
       { "trait_type": "Weight Class", "value": "Heavyweight" },
@@ -158,7 +158,7 @@
   {
     "name": "Floyd Mayweather NFT",
     "description": "NFT representando a Floyd Mayweather, un boxeador invicto conocido por su defensa impenetrable.",
-    "image": "ipfs://<CID_DE_LA_IMAGEN_MAYWEATHER>",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/floy.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "Boxeo" },
       { "trait_type": "Weight Class", "value": "Welterweight" },
@@ -171,7 +171,7 @@
   {
     "name": "Manny Pacquiao NFT",
     "description": "NFT representando a Manny Pacquiao, un campeón mundial en múltiples divisiones de peso.",
-    "image": "ipfs://<CID_DE_LA_IMAGEN_PACQUIAO>",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/manny.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "Boxeo" },
       { "trait_type": "Weight Class", "value": "Welterweight" },
@@ -184,7 +184,7 @@
   {
     "name": "Canelo Álvarez NFT",
     "description": "NFT representando a Canelo Álvarez, conocido por su habilidad y estrategia en el ring.",
-    "image": "ipfs://<CID_DE_LA_IMAGEN_CANELO>",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/canelo.jpg",
     "attributes": [
       { "trait_type": "Category", "value": "Boxeo" },
       { "trait_type": "Weight Class", "value": "Super Middleweight" },

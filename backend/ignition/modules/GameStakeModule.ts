@@ -3,7 +3,7 @@ import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 // Define el módulo para desplegar el contrato GameStakeNFT
 const GameStakeNFTModule = buildModule("GameStakeNFTModule", (m) => {
   // Parámetros del módulo que pueden ser configurados antes del despliegue
-  const baseURI = m.getParameter<string>("baseURI", "ipfs://Qmcpm2Nruw83ZWyQ5hVLR9kotryZ98HeFnF61FJYFoQyHU/"); // Reemplaza <BASE_CID> con tu URI base de IPFS
+  const baseURI = m.getParameter<string>("baseURI", "ipfs://QmVtpUZ8KW8S8TRSCFtpiTjdRaMvDBfUWx4uVXN34oBDYy/"); // Reemplaza <BASE_CID> con tu URI base de IPFS
 
 
   // Desplegar el contrato GameStakeNFT

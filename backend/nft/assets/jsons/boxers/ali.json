@@ -1,0 +1,13 @@
+{
+    "name": "Muhammad Ali NFT",
+    "description": "NFT representando a Muhammad Ali, una leyenda del boxeo conocido como 'El Más Grande'.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/ali.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Heavyweight" },
+      { "trait_type": "Skill", "value": 99 },
+      { "trait_type": "Speed", "value": 90 },
+      { "trait_type": "Power", "value": 95 },
+      { "trait_type": "Nationality", "value": "USA" }
+    ]
+}

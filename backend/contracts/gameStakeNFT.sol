@@ -5,15 +5,14 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-interface IFootballBetting {
-    function addPoints(address user, uint256 amount) external;
-}
 
 contract GameStakeNFT is ERC1155, Ownable {
     uint256 private _tokenIdCounter; // Contador de IDs de tokens
 
     uint256 public packPriceETH = 0.01 ether; // Precio de cada sobre en ETH
     mapping(uint256 => string) public categories; 
+    string public name = "GameStakeNFT"; // Nombre de Colección
+    string public symbol = "GSNFT"; // Símbolo de la Colección
 
 
     constructor(string memory baseURI, address initialOwner) ERC1155(baseURI) Ownable(initialOwner) {}
