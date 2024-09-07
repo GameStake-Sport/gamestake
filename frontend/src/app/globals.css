@@ -68,6 +68,14 @@
   }
 }
 
+input,
+input:focus,
+input:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .bg-email-bg {
   background-image: url('/images/email-bg.webp');
   background-position: 50% 50%;

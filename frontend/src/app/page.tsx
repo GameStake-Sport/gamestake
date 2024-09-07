@@ -2,6 +2,8 @@ import { NextPage } from 'next';
 import SportLinks from '../components/SportsLinks';
 import CryptoBenefits from '../components/CryptoBenefits';
 import JoinTribe from '@/components/JoinTribe';
+import BetInput from '@/components/BetInput';
+import Bets from '@/components/Bets';
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
       <div>
         <SportLinks />
         <CryptoBenefits />
+        <Bets/>
         <JoinTribe />
       </div>
     </main>
