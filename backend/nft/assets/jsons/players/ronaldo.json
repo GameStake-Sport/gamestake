@@ -1,0 +1,13 @@
+{
+    "name": "Cristiano Ronaldo NFT",
+    "description": "NFT representando a Cristiano Ronaldo, un futbolista legendario conocido por su velocidad y habilidades.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/ronaldo.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 98 },
+      { "trait_type": "Speed", "value": 94 },
+      { "trait_type": "Power", "value": 90 },
+      { "trait_type": "Nationality", "value": "Portugal" }
+    ]
+}

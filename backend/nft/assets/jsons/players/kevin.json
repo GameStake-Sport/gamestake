@@ -1,0 +1,13 @@
+{
+    "name": "Kevin De Bruyne NFT",
+    "description": "NFT representando a Kevin De Bruyne, un centrocampista belga conocido por su precisión en los pases.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kevindebruy.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Midfielder" },
+      { "trait_type": "Skill", "value": 92 },
+      { "trait_type": "Speed", "value": 84 },
+      { "trait_type": "Power", "value": 80 },
+      { "trait_type": "Nationality", "value": "Belgium" }
+    ]
+}

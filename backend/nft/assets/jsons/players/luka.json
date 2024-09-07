@@ -1,0 +1,13 @@
+{
+    "name": "Luka Modrić NFT",
+    "description": "NFT representando a Luka Modrić, un centrocampista croata con habilidades técnicas sobresalientes.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/luka.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Midfielder" },
+      { "trait_type": "Skill", "value": 89 },
+      { "trait_type": "Speed", "value": 77 },
+      { "trait_type": "Power", "value": 80 },
+      { "trait_type": "Nationality", "value": "Croatia" }
+    ]
+}

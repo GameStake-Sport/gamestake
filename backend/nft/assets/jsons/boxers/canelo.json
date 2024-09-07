@@ -1,0 +1,13 @@
+{
+    "name": "Canelo Álvarez NFT",
+    "description": "NFT representando a Canelo Álvarez, conocido por su habilidad y estrategia en el ring.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/canelo.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Super Middleweight" },
+      { "trait_type": "Skill", "value": 94 },
+      { "trait_type": "Speed", "value": 86 },
+      { "trait_type": "Power", "value": 92 },
+      { "trait_type": "Nationality", "value": "Mexico" }
+    ]
+}
