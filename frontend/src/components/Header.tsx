@@ -1,13 +1,33 @@
+'use client'
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from 'react';
+import { ethers } from 'ethers';
 
 export default function Header() {
+    const [walletAddress, setWalletAddress] = useState<string | null>(null);
+
+    async function requestAccount() {
+        if (window.ethereum) {
+            try {
+                const accounts = await window.ethereum.request({
+                    method: 'eth_requestAccounts',
+                });
+                setWalletAddress(accounts[0]);
+            } catch (error) {
+                console.log('Error connecting to MetaMask', error);
+            }
+        } else {
+            alert('MetaMask not detected');
+        }
+    }
+
     return (
         <header className="fixed top-0 w-full bg-custom-bg z-50">
             <div className="container max-w-full mx-auto flex justify-between items-center py-4">
                 {/* Logo y Navegación Izquierda */}
                 <div className="flex items-center space-x-4">
                     <div className="font-bold text-xl">
-                        <img className="w-28 ml-5" src="/images/logo.png" alt="Logo" />
+                        <img className="w-28 ml-5" src="/images/logo.svg" alt="Logo" />
                     </div>
 
                     {/* Botones (Responsive para móviles) */}
@@ -118,9 +138,15 @@ export default function Header() {
                             </svg>
                         </div>
                     </Button>
-                    <Button className="rounded-full w-32 ml-10">
-                        <span className="m-3">Sign up</span>
-                    </Button>
+                    {walletAddress ? (
+                        <Button className="rounded-full w-32 ml-10">
+                            <span className="m-3">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
+                        </Button>
+                    ) : (
+                        <Button className="rounded-full w-32 ml-10" onClick={requestAccount}>
+                            <span className="m-3">Connect Wallet</span>
+                        </Button>
+                    )}
                 </div>
             </div>
         </header>
