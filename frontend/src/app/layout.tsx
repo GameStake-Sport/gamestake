@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer'
-
+import { WalletProvider } from '../components/context/walletconexion';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,20 +20,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-custom-bg`}>
-        <div>
-          <header>
-            <Header />
-          </header>
+        <WalletProvider>
+          <div>
+            <header>
+              <Header />
+            </header>
 
-          <main className="flex-grow">
+            <main className="flex-grow">
+              {children}
+            </main>
 
-          </main>
-
-          <footer>
-            <Footer />
-          </footer>
-        </div>
-        {children}
+            <footer>
+              <Footer />
+            </footer>
+          </div>
+        </WalletProvider>
       </body>
     </html>
   );
