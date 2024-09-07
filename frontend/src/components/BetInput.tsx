@@ -1,16 +1,19 @@
 'use client'
 
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
 interface BetInputProps {
+  name: string
   label?: string
   placeholder?: string
   styles?: string
+  disable?: boolean
+  type?: string
 }
 
-const BetInput: FC<BetInputProps> = ({ label, placeholder, styles }) => {
+const BetInput: FC<BetInputProps> = ({ name, label, placeholder, styles, disable, type = 'number' }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [data, setData] = useState('')
 
@@ -23,27 +26,36 @@ const BetInput: FC<BetInputProps> = ({ label, placeholder, styles }) => {
       setIsFocused(false)
   }
 
+  useEffect(() => {
+    if (disable) {
+      setData('')
+      setIsFocused(false)
+    }
+  }, [disable])
+
   return (
-    <div className={`relative w-full max-w-xs rounded-lg shadow ${styles}`}>
+    <div className={`relative max-w-40 rounded-lg shadow ${styles}`}>
       {
         label &&
         <Label
-          htmlFor='email'
-          className={`absolute left-3 z-10 transition-all text-xl ${
-            isFocused ? '-top-3 text-md text-red' : 'top-1.5 text-white'
+          htmlFor={name}
+          className={`absolute left-3 z-10 transition-all text-xl duration-300 ${
+            isFocused ? '-top-3 text-lg' : 'top-5 text-white pt-1 pl-1'
           } text-white`}
         >
           { label }
         </Label>
       }
       <Input
-        type='email'
-        id='email'
+        type={type}
+        id={name}
         placeholder={placeholder}
-        className='bg-gray-500/50 backdrop-blur-md text-white px-3 py-2 w-full border-none focus:outline-none focus:ring-0 focus:border-none focus-visible:ring-0'
+        className='w-full text-center h-20 bg-gray-500/50 backdrop-blur-md text-white px-3 py-2 border-none focus:outline-none focus:ring-0 focus:border-none focus-visible:ring-0 text-2xl'
         onFocus={() => setIsFocused(true)}
         onBlur={handleOnBlur}
         onChange={(e) => handleChange(e.target.value)}
+        disabled={disable}
+        value={data}
       />
     </div>
   )
