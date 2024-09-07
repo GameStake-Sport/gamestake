@@ -1,0 +1,13 @@
+{
+    "name": "Floyd Mayweather NFT",
+    "description": "NFT representando a Floyd Mayweather, un boxeador invicto conocido por su defensa impenetrable.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/floy.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Welterweight" },
+      { "trait_type": "Skill", "value": 98 },
+      { "trait_type": "Speed", "value": 88 },
+      { "trait_type": "Power", "value": 85 },
+      { "trait_type": "Nationality", "value": "USA" }
+    ]
+}

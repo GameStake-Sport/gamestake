@@ -1,0 +1,13 @@
+{
+    "name": "Mike Tyson NFT",
+    "description": "NFT representando a Mike Tyson, conocido por su increíble poder de golpeo y agresividad.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/mike.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Heavyweight" },
+      { "trait_type": "Skill", "value": 95 },
+      { "trait_type": "Speed", "value": 85 },
+      { "trait_type": "Power", "value": 98 },
+      { "trait_type": "Nationality", "value": "USA" }
+    ]
+}

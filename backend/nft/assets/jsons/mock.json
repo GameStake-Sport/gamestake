@@ -1,0 +1,197 @@
+[
+  {
+    "name": "Lionel Messi NFT",
+    "description": "NFT representando a Lionel Messi, uno de los mejores futbolistas de todos los tiempos.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/messi.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 99 },
+      { "trait_type": "Speed", "value": 90 },
+      { "trait_type": "Power", "value": 85 },
+      { "trait_type": "Nationality", "value": "Argentina" }
+    ]
+  },
+  {
+    "name": "Cristiano Ronaldo NFT",
+    "description": "NFT representando a Cristiano Ronaldo, un futbolista legendario conocido por su velocidad y habilidades.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/ronaldo.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 98 },
+      { "trait_type": "Speed", "value": 94 },
+      { "trait_type": "Power", "value": 90 },
+      { "trait_type": "Nationality", "value": "Portugal" }
+    ]
+  },
+  {
+    "name": "Neymar Jr. NFT",
+    "description": "NFT representando a Neymar Jr., un delantero brasileño conocido por su estilo de juego creativo.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/neymar.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 95 },
+      { "trait_type": "Speed", "value": 89 },
+      { "trait_type": "Power", "value": 85 },
+      { "trait_type": "Nationality", "value": "Brazil" }
+    ]
+  },
+  {
+    "name": "Kylian Mbappé NFT",
+    "description": "NFT representando a Kylian Mbappé, uno de los futbolistas jóvenes más rápidos y talentosos.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kylian.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 93 },
+      { "trait_type": "Speed", "value": 97 },
+      { "trait_type": "Power", "value": 88 },
+      { "trait_type": "Nationality", "value": "France" }
+    ]
+  },
+  {
+    "name": "Kevin De Bruyne NFT",
+    "description": "NFT representando a Kevin De Bruyne, un centrocampista belga conocido por su precisión en los pases.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kevindebruy.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Midfielder" },
+      { "trait_type": "Skill", "value": 92 },
+      { "trait_type": "Speed", "value": 84 },
+      { "trait_type": "Power", "value": 80 },
+      { "trait_type": "Nationality", "value": "Belgium" }
+    ]
+  },
+  {
+    "name": "Angel Di Maria NFT",
+    "description": "NFT representando a Angel Di Maria. Un delantero argentino con gran habilidad y velocidad.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/dimari.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 90 },
+      { "trait_type": "Speed", "value": 78 },
+      { "trait_type": "Power", "value": 92 },
+      { "trait_type": "Nationality", "value": "Argentina" }
+    ]
+  },
+  {
+    "name": "Mohamed Salah NFT",
+    "description": "NFT representando a Mohamed Salah, un delantero egipcio conocido por su velocidad y precisión.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/salah.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 91 },
+      { "trait_type": "Speed", "value": 92 },
+      { "trait_type": "Power", "value": 85 },
+      { "trait_type": "Nationality", "value": "Egypt" }
+    ]
+  },
+  {
+    "name": "Robert Lewandowski NFT",
+    "description": "NFT representando a Robert Lewandowski, un delantero prolífico con un gran olfato de gol.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/lewandousky.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 94 },
+      { "trait_type": "Speed", "value": 80 },
+      { "trait_type": "Power", "value": 90 },
+      { "trait_type": "Nationality", "value": "Poland" }
+    ]
+  },
+  {
+    "name": "Sergio Ramos NFT",
+    "description": "NFT representando a Sergio Ramos, un defensor icónico conocido por su liderazgo y habilidades defensivas.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/ramos.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Defender" },
+      { "trait_type": "Skill", "value": 87 },
+      { "trait_type": "Speed", "value": 75 },
+      { "trait_type": "Power", "value": 88 },
+      { "trait_type": "Nationality", "value": "Spain" }
+    ]
+  },
+  {
+    "name": "Luka Modrić NFT",
+    "description": "NFT representando a Luka Modrić, un centrocampista croata con habilidades técnicas sobresalientes.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/luka.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Midfielder" },
+      { "trait_type": "Skill", "value": 89 },
+      { "trait_type": "Speed", "value": 77 },
+      { "trait_type": "Power", "value": 80 },
+      { "trait_type": "Nationality", "value": "Croatia" }
+    ]
+  },
+  {
+    "name": "Muhammad Ali NFT",
+    "description": "NFT representando a Muhammad Ali, una leyenda del boxeo conocido como 'El Más Grande'.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/ali.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Heavyweight" },
+      { "trait_type": "Skill", "value": 99 },
+      { "trait_type": "Speed", "value": 90 },
+      { "trait_type": "Power", "value": 95 },
+      { "trait_type": "Nationality", "value": "USA" }
+    ]
+  },
+  {
+    "name": "Mike Tyson NFT",
+    "description": "NFT representando a Mike Tyson, conocido por su increíble poder de golpeo y agresividad.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/mike.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Heavyweight" },
+      { "trait_type": "Skill", "value": 95 },
+      { "trait_type": "Speed", "value": 85 },
+      { "trait_type": "Power", "value": 98 },
+      { "trait_type": "Nationality", "value": "USA" }
+    ]
+  },
+  {
+    "name": "Floyd Mayweather NFT",
+    "description": "NFT representando a Floyd Mayweather, un boxeador invicto conocido por su defensa impenetrable.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/floy.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Welterweight" },
+      { "trait_type": "Skill", "value": 98 },
+      { "trait_type": "Speed", "value": 88 },
+      { "trait_type": "Power", "value": 85 },
+      { "trait_type": "Nationality", "value": "USA" }
+    ]
+  },
+  {
+    "name": "Manny Pacquiao NFT",
+    "description": "NFT representando a Manny Pacquiao, un campeón mundial en múltiples divisiones de peso.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/manny.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Welterweight" },
+      { "trait_type": "Skill", "value": 96 },
+      { "trait_type": "Speed", "value": 91 },
+      { "trait_type": "Power", "value": 89 },
+      { "trait_type": "Nationality", "value": "Philippines" }
+    ]
+  },
+  {
+    "name": "Canelo Álvarez NFT",
+    "description": "NFT representando a Canelo Álvarez, conocido por su habilidad y estrategia en el ring.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/canelo.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Super Middleweight" },
+      { "trait_type": "Skill", "value": 94 },
+      { "trait_type": "Speed", "value": 86 },
+      { "trait_type": "Power", "value": 92 },
+      { "trait_type": "Nationality", "value": "Mexico" }
+    ]
+  }
+]

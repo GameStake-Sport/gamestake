@@ -1,0 +1,13 @@
+{
+    "name": "Kylian Mbappé NFT",
+    "description": "NFT representando a Kylian Mbappé, uno de los futbolistas jóvenes más rápidos y talentosos.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/kylian.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 93 },
+      { "trait_type": "Speed", "value": 97 },
+      { "trait_type": "Power", "value": 88 },
+      { "trait_type": "Nationality", "value": "France" }
+    ]
+}

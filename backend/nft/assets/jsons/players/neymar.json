@@ -1,0 +1,13 @@
+{
+    "name": "Neymar Jr. NFT",
+    "description": "NFT representando a Neymar Jr., un delantero brasileño conocido por su estilo de juego creativo.",
+    "image": "ipfs://QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/neymar.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 95 },
+      { "trait_type": "Speed", "value": 89 },
+      { "trait_type": "Power", "value": 85 },
+      { "trait_type": "Nationality", "value": "Brazil" }
+    ]
+}

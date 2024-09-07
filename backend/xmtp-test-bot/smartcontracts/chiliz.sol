@@ -148,4 +148,39 @@ contract FootballBetting {
         owners[ownerToRemove] = false;
         ownerCount--;
     }
+    
+    // Point System
+    mapping(address => uint256) public points;
+    uint256 public packPricePoints = 100;
+
+    event PointsAdded(address indexed user, uint256 amount);
+    event PointsDeducted(address indexed user, uint256 amount);
+    event PointsRedeemed(address indexed user, uint256 amount);
+
+
+    function redeemPointsForPack(address gameStakeNFTContract) public{
+        require(points[msg.sender] >= packPricePoints, "No tienes suficientes puntos");
+
+        points[msg.sender] -= packPricePoints;
+
+        
+        (bool success, ) = gameStakeNFTContract.call(
+            abi.encodeWithSignature("openPackWithPoints(address)", msg.sender)
+        );
+
+        require(success, "Fallo al redimir puntos");
+
+        emit PointsRedeemed(msg.sender, packPricePoints);
+    }
+
+    function setPackPricePoints_owner(uint256 _newPrice) public onlyOwner {
+        packPricePoints = _newPrice;
+    }
+
+
+    function addPoints_owner(address user, uint256 amount) external onlyOwner {
+        points[user] += amount;
+        emit PointsAdded(user, amount);
+    }
+
 }

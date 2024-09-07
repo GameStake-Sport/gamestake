@@ -6,9 +6,15 @@
     "deploy": "npx hardhat run scripts/deploy.js"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.5",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@openzeppelin/contracts": "^5.0.2",
+    "@types/node": "^22.5.4",
     "chai": "^4.5.0",
     "ethers": "^6.13.2",
-    "hardhat": "^2.22.9"
+    "hardhat": "^2.22.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   }
 }

@@ -1,0 +1,13 @@
+{
+    "name": "Manny Pacquiao NFT",
+    "description": "NFT representando a Manny Pacquiao, un campeón mundial en múltiples divisiones de peso.",
+    "image": "ipfs://QmX31uhUi8iFLVMNNrnnrZ7fnb2oQsUpRNgVxzMNuP9ynj/manny.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "Boxeo" },
+      { "trait_type": "Weight Class", "value": "Welterweight" },
+      { "trait_type": "Skill", "value": 96 },
+      { "trait_type": "Speed", "value": 91 },
+      { "trait_type": "Power", "value": 89 },
+      { "trait_type": "Nationality", "value": "Philippines" }
+    ]
+}

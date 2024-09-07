@@ -1,0 +1,13 @@
+{
+    "name": "Lionel Messi NFT",
+    "description": "NFT representando a Lionel Messi, uno de los mejores futbolistas de todos los tiempos.",
+    "image": "https://lavender-adjacent-gamefowl-74.mypinata.cloud/ipfs/QmUEgTH46RDPqwAS2ypuVzxfDka57f1srcjyALjyZ9nVjG/messi.jpg",
+    "attributes": [
+      { "trait_type": "Category", "value": "futbol" },
+      { "trait_type": "Position", "value": "Forward" },
+      { "trait_type": "Skill", "value": 99 },
+      { "trait_type": "Speed", "value": 90 },
+      { "trait_type": "Power", "value": 85 },
+      { "trait_type": "Nationality", "value": "Argentina" }
+    ]
+}
