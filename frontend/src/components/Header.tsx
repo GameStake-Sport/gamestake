@@ -2,24 +2,10 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
+import { useWallet } from '@/components/context/walletconexion';
 
 export default function Header() {
-    const [walletAddress, setWalletAddress] = useState<string | null>(null);
-
-    async function requestAccount() {
-        if (window.ethereum) {
-            try {
-                const accounts = await window.ethereum.request({
-                    method: 'eth_requestAccounts',
-                });
-                setWalletAddress(accounts[0]);
-            } catch (error) {
-                console.log('Error connecting to MetaMask', error);
-            }
-        } else {
-            alert('MetaMask not detected');
-        }
-    }
+    const { walletAddress, connectWallet } = useWallet();
 
     return (
         <header className="fixed top-0 w-full bg-custom-bg z-50">
@@ -139,14 +125,14 @@ export default function Header() {
                         </div>
                     </Button>
                     {walletAddress ? (
-                        <Button className="rounded-full w-32 ml-10">
-                            <span className="m-3">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
-                        </Button>
-                    ) : (
-                        <Button className="rounded-full w-32 ml-10" onClick={requestAccount}>
-                            <span className="m-3">Connect Wallet</span>
-                        </Button>
-                    )}
+                <Button className="rounded-full w-32 ml-10">
+                    <span className="m-3">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
+                </Button>
+            ) : (
+                <Button className="rounded-full w-32 ml-10" onClick={connectWallet}>
+                    <span className="m-3">Connect Wallet</span>
+                </Button>
+            )}
                 </div>
             </div>
         </header>
