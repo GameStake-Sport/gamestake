@@ -67,3 +67,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-email-bg {
+  background-image: url('/images/email-bg.webp');
+  background-position: 50% 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .bg-email-bg {
+    background-size: 100% auto;
+  }
+}

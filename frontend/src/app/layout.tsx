@@ -20,21 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-custom-bg`}>
-        <div>
-          <header>
-            <Header />
-          </header>
+      <body className={`${inter.className} bg-custom-bg min-h-screen flex flex-col`}>
+        <Header />
 
-          <main className="flex-grow">
+        <main className="flex-grow">
+          {children}
+        </main>
 
-          </main>
-
-          <footer>
-            <Footer />
-          </footer>
-        </div>
-        {children}
+        <Footer />
       </body>
     </html>
   );

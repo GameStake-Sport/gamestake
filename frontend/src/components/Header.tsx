@@ -26,8 +26,8 @@ export default function Header() {
             <div className="container max-w-full mx-auto flex justify-between items-center py-4">
                 {/* Logo y Navegación Izquierda */}
                 <div className="flex items-center space-x-4">
-                    <div className="font-bold text-xl">
-                        <img className="w-28 ml-5" src="/images/logo.svg" alt="Logo" />
+                    <div className="font-bold text-xl mr-5">
+                        <img className="w-24 ml-5" src="/images/logo.svg" alt="Logo" />
                     </div>
 
                     {/* Botones (Responsive para móviles) */}

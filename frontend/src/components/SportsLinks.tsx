@@ -85,7 +85,7 @@ const sportsLinks: SportLink[] = [
 
 const ScrollableSportsLinks: React.FC = () => {
     return (
-        <div className="flex container overflow-x-auto scrollbar-hide text-white">
+        <div className="flex container overflow-x-auto scrollbar-hide text-white mt-10">
             <div className="flex w-max lg:w-full gap-8 px-2 shrink-0 whitespace-nowrap">
                 {sportsLinks.map((link, index) => (
                     <a
