@@ -14,5 +14,9 @@
     "test:be": "cd backend && npm run test",
     "build:fe": "cd frontend && npm run build",
     "deploy:be": "cd backend && npm run deploy"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^4.0.4",
+    "web3modal": "^1.9.12"
   }
 }
