@@ -1,20 +1,21 @@
 "use client";
 const products = [
     {
+      id: 1,
       name: "NFT Pack",
       description: "A pack of 3 random football NFTs.",
       price: 100, // en puntos
       image: "images/pack.png",
     },
     {
-
+      id: 2,
       name: "NFT Pack",
       description: "A pack of 3 random Boxers NFTs.",
       price: 100, // en puntos
       image: "images/pack.png",
     },
     {
-
+        id: 3,
         name: "NFT Pack",
         description: "A pack of 3 random Boxers NFTs.",
         price: 100, // en puntos
