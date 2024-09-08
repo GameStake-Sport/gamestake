@@ -38,7 +38,7 @@ export function FloatingInbox({
   const [selectedConversation, setSelectedConversation] = useState(null);
   const [signer, setSigner] = useState();
 
-  const DEFAULT_CONVERSATION_ADDRESS = "0x158aA06A89886C2dC284F8400E7b45bDD3FA5a4B";
+  const DEFAULT_CONVERSATION_ADDRESS = "0x3d217dd72e90000BCc9672dC1C35591524134CD7";
 
   const styles = {
     FloatingLogo: {
@@ -288,22 +288,13 @@ export function FloatingInbox({
           className={" " + (isOnNetwork ? "expanded" : "")}>
           {isConnected && (
             <button style={styles.logoutBtn} onClick={handleLogout}>
-              Logout
+              
             </button>
           )}
           {isConnected && isOnNetwork && (
             <div style={styles.widgetHeader}>
               <div style={styles.conversationHeader}>
-                {isOnNetwork && selectedConversation && (
-                  <button
-                    style={styles.backButton}
-                    onClick={() => {
-                      setSelectedConversation(null);
-                    }}>
-                    ←
-                  </button>
-                )}
-                <h4 style={styles.conversationHeaderH4}>Conversations</h4>
+                <h4 style={styles.conversationHeaderH4}>🤖GameStakeBot Chat</h4>
               </div>
             </div>
           )}
@@ -322,7 +313,7 @@ export function FloatingInbox({
             {isConnected && !isOnNetwork && (
               <div style={styles.xmtpContainer}>
                 <button style={styles.btnXmtp} onClick={initXmtpWithKeys}>
-                  Connect to XMTP
+                  Chat with GameStakeBot
                 </button>
                 {isWalletCreated && (
                   <button style={styles.label}>
