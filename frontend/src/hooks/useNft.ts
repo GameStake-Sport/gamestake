@@ -44,7 +44,7 @@ const useNFTs = (walletAddress: string | null) => {
       const nftContract = new ethers.Contract(nftContractAddress, nftContractABI, provider);
 
       const nftList: NFT[] = [];
-      const maxTokenId = 100; // Máximo ID de token para recorrer
+      const maxTokenId = 15; // Máximo ID de token para recorrer
 
       // Recorremos los posibles token IDs
       for (let tokenId = 1; tokenId <= maxTokenId; tokenId++) {
@@ -66,7 +66,18 @@ const useNFTs = (walletAddress: string | null) => {
 
             const metadata = await response.json();
 
-            console.log('Metadata for token ID', tokenId, metadata);
+            // Añadir el NFT a la lista
+            nftList.push({
+              id: tokenId.toString(),
+              title: metadata.name,
+              imageUrl: convertIpfsToHttp(metadata.image),
+              description: metadata.description,
+              contractAddress: nftContractAddress
+            })
+
+            console.log('NFT found:', nftList);
+
+            // console.log('Metadata for token ID', tokenId, metadata);
           }
         } catch (innerError: any) {
           console.error(`Error fetching data for token ID ${tokenId}:`, innerError);
@@ -80,7 +91,7 @@ const useNFTs = (walletAddress: string | null) => {
     } finally {
       setLoading(false);
     }
-  }, [walletAddress, provider]);
+  }, [walletAddress]);
 
   useEffect(() => {
     if (walletAddress) {
