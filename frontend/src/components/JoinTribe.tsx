@@ -2,7 +2,7 @@ import React from 'react';
 
 const JoinTribe = () => {
     return (
-        <div className="mt-[60px] md:mt-[80px] flex relative flex-col lg:flex-row justify-between rounded-[20px] w-full h-[500px] lg:h-[252px] bg-no-repeat bg-[50%_50%] bg-[auto_100%] lg:bg-[100%_auto] overflow-hidden text-white bg-email-bg">
+        <div className="mt-[150px] md:mt-[180px] flex relative flex-col lg:flex-row justify-between rounded-[20px] w-full h-[500px] lg:h-[252px] bg-no-repeat bg-[50%_50%] bg-[auto_100%] lg:bg-[100%_auto] overflow-hidden text-white bg-email-bg">
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
 
@@ -29,7 +29,7 @@ const JoinTribe = () => {
             {/* Image */}
             <img
                 className="absolute lg:relative -bottom-10 object-cover lg:bottom-0 rotate-[9.5deg] left-5 lg:left-0 lg:mx-0 w-[437.27px] h-[412.874px] lg:h-[387.65px] origin-top-left z-[1]"
-                src="images/email-girl.webp"
+                src="images/image1.png"
                 alt="Join Our Tribe"
             />
         </div>

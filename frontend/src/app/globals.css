@@ -68,8 +68,27 @@
   }
 }
 
+input,
+input:focus,
+input:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .bg-email-bg {
-  background-image: url('/images/email-bg.webp');
+  background-image: url('/images/background.jpg');
   background-position: 50% 50%;
   background-size: auto 100%;
   background-repeat: no-repeat;

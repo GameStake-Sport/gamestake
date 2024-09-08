@@ -1,13 +1,26 @@
 'use client'
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from 'react';
-import { ethers } from 'ethers';
 import { useWallet } from '@/components/context/walletconexion';
 import Link from "next/link";
 
+
+
 export default function Header() {
-    const { walletAddress, connectWallet, disconnectWallet } = useWallet();
+    const { walletAddress, connectWallet, fetchPoints } = useWallet();
     const [userPoints, setUserPoints] = useState<any>(0); // Estado local para puntos del usuario
+
+    // Llama a fetchPoints cuando la billetera esté conectada y actualiza el estado de los puntos
+    useEffect(() => {
+      const getPoints = async () => {
+        if (walletAddress) {
+          const points = await fetchPoints(); // Llamada a fetchPoints del contexto
+        
+          setUserPoints(points); // Actualiza el estado local de puntos
+        }
+      };
+      getPoints();
+    }, [walletAddress, fetchPoints]); // Dependencia de walletAddress
 
     return (
         <header className="fixed top-0 w-full bg-custom-bg z-50">
