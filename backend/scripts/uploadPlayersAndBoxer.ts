@@ -5,7 +5,7 @@ import path from "path";
 
 async function main() {
     // Contract address
-     const contractaddress = '0xB1751c26DdCcCfaae4C97C48B18463333117dd38';
+     const contractaddress = '0x561A4E166C68e11019aaB142B2511513678E2611';
 
     //  Read File
      const jsonPath = path.join(__dirname, "../nft/assets/jsons/mock.json");

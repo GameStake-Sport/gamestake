@@ -10,6 +10,7 @@ interface BetResult {
 
 interface ContractAPI {
   placeBet: (matchId: number, result: number, amount: string) => Promise<void>;
+  redeemPointsForPack: () => Promise<void>;
   connectContract: () => Promise<void>;
 }
 
@@ -460,8 +461,26 @@ export const useBetting = (): ContractAPI => {
     }
   };
 
+  const redeemPointsForPack = async () => {
+    if (!contract) {
+      console.error('Contrato no conectado.');
+      return;
+    }
+
+    const gameStakeNFTContract = '0x561A4E166C68e11019aaB142B2511513678E2611';
+
+    try {
+      const tx = await contract.redeemPointsForPack(gameStakeNFTContract);
+      await tx.wait();
+      console.log('Pack redimido con éxito!');
+    } catch (error) {
+      console.error('Error al redimir el pack:', error);
+    }
+  };
+
   return {
     connectContract,
     placeBet,
+    redeemPointsForPack
   };
 };
