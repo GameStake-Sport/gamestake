@@ -40,7 +40,7 @@ const useNFTs = (walletAddress: string | null) => {
     setError(null);
 
     try {
-      const nftContractAddress = '0x561A4E166C68e11019aaB142B2511513678E2611';
+      const nftContractAddress = '0x0210B6BAf71C4C95120ea9d746B2551c6623A037';
       const nftContract = new ethers.Contract(nftContractAddress, nftContractABI, provider);
 
       const nftList: NFT[] = [];

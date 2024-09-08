@@ -414,7 +414,7 @@ const contractABI = [
   }
 ];
 
-const contractAddress = '0xf82Ac7d308951E85af01f6698FeE201c24030CB9'; // Reemplaza con la dirección de tu contrato desplegado
+const contractAddress = '0xB2AC0a88d29588198c2ca0Abf50eBEdf3132d54D'; // FootballBetting contract address
 
 export const useBetting = (): ContractAPI => {
   const [contract, setContract] = useState<ethers.Contract | null>(null);
