@@ -14,9 +14,8 @@ export default function Header() {
       const getPoints = async () => {
         if (walletAddress) {
           const points = await fetchPoints(); // Llamada a fetchPoints del contexto
-          let formatPoints = points.toString();
         
-          setUserPoints(formatPoints); // Actualiza el estado local de puntos
+          setUserPoints(points); // Actualiza el estado local de puntos
         }
       };
       getPoints();
