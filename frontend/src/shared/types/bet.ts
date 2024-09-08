@@ -6,4 +6,5 @@ export interface Bet {
   money: number,
   wasEarned: boolean,
   earnings: number
+  exp: number
 }

@@ -9,7 +9,8 @@ const myBets: Bet[] = [
     result2: 2,
     money: 0,
     wasEarned: true,
-    earnings: 0
+    earnings: 0,
+    exp: 10
   },
   {
     id: 'bet2',
@@ -18,7 +19,8 @@ const myBets: Bet[] = [
     result2: 2,
     money: 10,
     wasEarned: true,
-    earnings: 1.5
+    earnings: 1.5,
+    exp: 5
   },
   {
     id: 'bet2',
@@ -27,7 +29,8 @@ const myBets: Bet[] = [
     result2: 2,
     money: 10,
     wasEarned: true,
-    earnings: 1.5
+    earnings: 1.5,
+    exp: 20
   }
 ]
 
