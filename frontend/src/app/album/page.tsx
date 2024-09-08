@@ -207,26 +207,34 @@ export default function Album() {
   const { walletAddress } = useWallet();
   const { nfts, loading, error } = useNFTs(walletAddress)
 
+
   return (
     <div className='mt-24 text-white w-full flex justify-center'>
-      <div className='flex flex-col w-full max-w-3xl text-center'>
-        <h1 className='text-4xl mt-8 mb-10'>My album</h1>
+    <div className='flex flex-col w-full max-w-3xl text-center'>
+      <h1 className='text-4xl mt-8 mb-10'>My Album</h1>
 
+      {loading && <p>Cargando NFTs...</p>} {/* Mostrar mensaje de carga */}
+
+      {error && <p>Error al cargar NFTs: {error}</p>} {/* Mostrar mensaje de error */}
+
+      {!loading && !error && nfts.length === 0 && <p>No tienes NFTs en este momento.</p>} {/* Mostrar mensaje si no hay NFTs */}
+
+      {/* Mostrar NFTs */}
+      {!loading && !error && nfts.length > 0 && (
         <div className="grid grid-cols-4 gap-y-10"> {/* Ajusta el número de columnas */}
-          {
-            myNFTs.map(nft => (
-              <div key={nft.name} className="relative w-40 h-48 border-2 border-gray-400 rounded-lg overflow-hidden shadow-md">
-                <Image
-                  src={nft.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
-                  alt={`NFT ${nft.name}`}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-            ))
-          }
+          {nfts.map((nft) => (
+            <div key={nft.id} className="relative w-40 h-48 border-2 border-gray-400 rounded-lg overflow-hidden shadow-md">
+              <Image
+                src={nft.imageUrl}
+                alt={`NFT ${nft.title}`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+          ))}
         </div>
-      </div>
+      )}
     </div>
+  </div>
   )
 }
