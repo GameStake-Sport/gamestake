@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import SportLinks from '../components/SportsLinks';
 import CryptoBenefits from '../components/CryptoBenefits';
 import JoinTribe from '@/components/JoinTribe';

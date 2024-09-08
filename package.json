@@ -14,5 +14,8 @@
     "test:be": "cd backend && npm run test",
     "build:fe": "cd frontend && npm run build",
     "deploy:be": "cd backend && npm run deploy"
+  },
+  "dependencies": {
+    "@ethersproject/providers": "^5.7.2"
   }
 }

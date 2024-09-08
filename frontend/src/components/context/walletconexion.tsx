@@ -1,9 +1,13 @@
 'use client'
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import { ethers } from 'ethers'; // Ensure correct import
+import { Web3Provider } from '@ethersproject/providers'; 
 
 interface WalletContextType {
   walletAddress: string | null;
   connectWallet: () => Promise<void>;
+  getSigner: () => Promise<ethers.Signer>;
+  disconnectWallet: () => void;
 }
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
@@ -12,7 +16,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
 
   const connectWallet = async () => {
-    if (window.ethereum) {
+    if (window.ethereum) { // Check if window and window.ethereum are defined
       try {
         const accounts = await window.ethereum.request({
           method: 'eth_requestAccounts',
@@ -24,6 +28,10 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     } else {
       alert('MetaMask not detected');
     }
+  };
+
+  const disconnectWallet = () => {
+    setWalletAddress(null);
   };
 
   useEffect(() => {
@@ -40,7 +48,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   return (
-    <WalletContext.Provider value={{ walletAddress, connectWallet }}>
+    <WalletContext.Provider value={{ walletAddress, connectWallet, getSigner, disconnectWallet }}>
       {children}
     </WalletContext.Provider>
   );
@@ -52,4 +60,14 @@ export const useWallet = () => {
     throw new Error('useWallet must be used within a WalletProvider');
   }
   return context;
+};
+
+export const getSigner = async (): Promise<ethers.Signer> => {
+  if (window.ethereum) {
+    const provider = new Web3Provider(window.ethereum);  // Ensure 'providers' is accessible
+    const signer = provider.getSigner() as unknown as ethers.Signer; // Cast to unknown first
+    return signer;
+  } else {
+    throw new Error('MetaMask not detected');
+  }
 };
