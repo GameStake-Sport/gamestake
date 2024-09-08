@@ -1,5 +1,9 @@
+"use client";
+
 import type { NFT } from '@/shared/types/nft'
 import Image from 'next/image'
+import useNFTs from '@/hooks/useNft'
+import { useWallet } from '@/components/context/walletconexion'
 
 const myNFTs: NFT[] = [
   {
@@ -200,6 +204,9 @@ const myNFTs: NFT[] = [
 ]
 
 export default function Album() {
+  const { walletAddress } = useWallet();
+  const { nfts, loading, error } = useNFTs(walletAddress)
+
   return (
     <div className='mt-24 text-white w-full flex justify-center'>
       <div className='flex flex-col w-full max-w-3xl text-center'>
