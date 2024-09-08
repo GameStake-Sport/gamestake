@@ -31,7 +31,6 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       alert('MetaMask not detected');
     }
   };
-
   const fetchPoints = useCallback(async () => {
     if (!walletAddress) return;
 

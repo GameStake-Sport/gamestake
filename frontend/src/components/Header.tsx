@@ -11,13 +11,14 @@ export default function Header() {
 
     // Llama a fetchPoints cuando la billetera esté conectada y actualiza el estado de los puntos
     useEffect(() => {
-        const getPoints = async () => {
-            if (walletAddress) {
-                const points = await fetchPoints(); // Llamada a fetchPoints del contexto
-                setUserPoints(points); // Actualiza el estado local de puntos
-            }
-        };
-        getPoints();
+      const getPoints = async () => {
+        if (walletAddress) {
+          const points = await fetchPoints(); // Llamada a fetchPoints del contexto
+        
+          setUserPoints(points); // Actualiza el estado local de puntos
+        }
+      };
+      getPoints();
     }, [walletAddress, fetchPoints]); // Dependencia de walletAddress
 
     return (
