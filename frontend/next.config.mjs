@@ -6,10 +6,9 @@ const nextConfig = {
       config.output.webassemblyModuleFilename = (isServer ? '../' : '') + 'static/wasm/[modulehash].wasm';
       return config;
     },
-  },
-
+    
   images: {
-    domains: ['ipfs.io', 'lavender-adjacent-gamefowl-74.mypinata.cloud'],
+    domains: ['ipfs.io', 'lavender-adjacent-gamefowl-74.mypinata.cloud']
   },
 };
 

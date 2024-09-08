@@ -1,5 +1,5 @@
 'use client'
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext,useCallback, useEffect } from 'react';
 import { ethers } from 'ethers'; // Ensure correct import
 import { Web3Provider } from '@ethersproject/providers'; 
 import { useBetting } from '@/hooks/useBetting';
@@ -11,7 +11,6 @@ interface WalletContextType {
   getSigner: () => Promise<ethers.Signer>;
   disconnectWallet: () => void;
   fetchPoints: () => Promise<void>;
-
 }
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
@@ -71,7 +70,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   return (
-    <WalletContext.Provider value={{ walletAddress, connectWallet, getSigner, disconnectWallet }}>
+    <WalletContext.Provider value={{ walletAddress, connectWallet, getSigner, disconnectWallet, fetchPoints }}>
       {children}
     </WalletContext.Provider>
   );

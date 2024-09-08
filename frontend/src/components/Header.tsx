@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 export default function Header() {
-    const { walletAddress, connectWallet, fetchPoints } = useWallet();
+    const { walletAddress, connectWallet, fetchPoints, disconnectWallet } = useWallet();
     const [userPoints, setUserPoints] = useState<any>(0); // Estado local para puntos del usuario
 
     // Llama a fetchPoints cuando la billetera esté conectada y actualiza el estado de los puntos
