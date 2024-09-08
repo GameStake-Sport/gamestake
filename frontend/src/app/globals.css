@@ -88,7 +88,7 @@ input[type="number"] {
 }
 
 .bg-email-bg {
-  background-image: url('/images/email-bg.webp');
+  background-image: url('/images/background.jpg');
   background-position: 50% 50%;
   background-size: auto 100%;
   background-repeat: no-repeat;

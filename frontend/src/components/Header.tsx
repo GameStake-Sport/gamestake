@@ -11,13 +11,13 @@ export default function Header() {
 
     // Llama a fetchPoints cuando la billetera esté conectada y actualiza el estado de los puntos
     useEffect(() => {
-      const getPoints = async () => {
-        if (walletAddress) {
-          const points = await fetchPoints(); // Llamada a fetchPoints del contexto
-          setUserPoints(points); // Actualiza el estado local de puntos
-        }
-      };
-      getPoints();
+        const getPoints = async () => {
+            if (walletAddress) {
+                const points = await fetchPoints(); // Llamada a fetchPoints del contexto
+                setUserPoints(points); // Actualiza el estado local de puntos
+            }
+        };
+        getPoints();
     }, [walletAddress, fetchPoints]); // Dependencia de walletAddress
 
     return (
@@ -31,7 +31,7 @@ export default function Header() {
 
                     {/* Botones (Responsive para móviles) */}
                     <div className="hidden md:flex space-x-4">
-                        <Link href="/"> 
+                        <Link href="/">
                             <Button className="rounded-xl">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +107,8 @@ export default function Header() {
                         <div className="absolute w-[28px] h-[28px] blur-[4.7px] rounded-full bg-[radial-gradient(1919%_103%_at_101%_42%,#F22F2F_3%,#5D8BFE_45%,_#F22F2F_100%)] hidden group-hover:block"></div>
                         <div className="absolute w-[26px] h-[26px] blur-[5.3px] rounded-full bg-[radial-gradient(1919%_103%_at_101%_43%,#D04DFF_3%,#5D8BFE_45%,#C268FF_100%)] group-hover:w-[34px] group-hover:h-[34px] duration-300"></div>
                         <img
-                            className="w-[59px] h-auto bottom-0 -right-1 absolute max-w-none"
-                            src="images/gift.webp"
+                            className="w-[45px] h-auto -right-1 absolute max-w-none"
+                            src="images/coin.png"
                             alt="Gift"
                         />
                     </a>
@@ -146,14 +146,14 @@ export default function Header() {
                         </div>
                     </Button>
                     {walletAddress ? (
-                <Button className="rounded-full w-32 ml-10">
-                    <span className="m-3">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
-                </Button>
-            ) : (
-                <Button className="rounded-full w-32 ml-10" onClick={connectWallet}>
-                    <span className="m-3">Connect Wallet</span>
-                </Button>
-            )}
+                        <Button className="rounded-full w-32 ml-10">
+                            <span className="m-3">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
+                        </Button>
+                    ) : (
+                        <Button className="rounded-full w-32 ml-10" onClick={connectWallet}>
+                            <span className="m-3">Connect Wallet</span>
+                        </Button>
+                    )}
                 </div>
             </div>
         </header>

@@ -2,8 +2,8 @@ import React from 'react';
 
 const CryptoBenefits = () => {
     return (
-        <div className="mt-5 max-w-[1220px] mx-auto relative text-white">
-            <div className="flex flex-col lg:h-[459px] lg:flex-row lg:items-center mb-20">
+        <div className="max-w-[1220px] mx-auto relative text-white">
+            <div className="flex flex-col lg:h-[459px] lg:flex-row lg:items-center mb-24">
                 <div className="px-[10px] relative z-[1]">
                     <h2 className="mt-5 font-header text-[34px] leading-[48px] md:text-[44px] md:leading-[56px]">
                         Dive into the best crypto betting experience
@@ -19,7 +19,7 @@ const CryptoBenefits = () => {
                     height="460"
                     decoding="async"
                     className="self-end w-full relative -right-5 -mt-12 -bottom-12 lg:right-0 lg:bottom-0 max-w-[700px] lg:max-w-[550px]"
-                    src="images/illustration.webp"
+                    src="images/image3.png"
                 />
             </div>
 

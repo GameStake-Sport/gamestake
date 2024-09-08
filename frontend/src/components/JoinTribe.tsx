@@ -29,7 +29,7 @@ const JoinTribe = () => {
             {/* Image */}
             <img
                 className="absolute lg:relative -bottom-10 object-cover lg:bottom-0 rotate-[9.5deg] left-5 lg:left-0 lg:mx-0 w-[437.27px] h-[412.874px] lg:h-[387.65px] origin-top-left z-[1]"
-                src="images/email-girl.webp"
+                src="images/image1.png"
                 alt="Join Our Tribe"
             />
         </div>
