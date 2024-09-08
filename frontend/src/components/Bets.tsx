@@ -15,7 +15,7 @@ import { useBetting } from '@/hooks/useBetting'
 
 export const matches: MatchType[] = [
   {
-    id: 111,
+    id: 1,
     team1: 'RM',
     team2: 'MU',
     start: DateTime.now().minus({ hours: 1 }),  // Un partido que ya comenzó
@@ -25,7 +25,7 @@ export const matches: MatchType[] = [
     result2: 2,
   },
   {
-    id: 222,
+    id: 2,
     team1: 'BFC',
     team2: 'RM',
     start: DateTime.now().minus({ days: 1 }),
