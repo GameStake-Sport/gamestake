@@ -12,7 +12,6 @@ interface ContractAPI {
   placeBet: (matchId: number, result: number, amount: string) => Promise<void>;
   redeemPointsForPack: () => Promise<void>;
   connectContract: () => Promise<void>;
-  getPoints: (userAddress: string) => Promise<number | void>;
 }
 
 const contractABI = [
@@ -455,23 +454,6 @@ export const useBetting = (): ContractAPI => {
     }
   };
 
-   // Nueva función para obtener los puntos del usuario
-   const getPoints = async (userAddress: string): Promise<number | void> => {
-    if (!contract) {
-      console.error('Contrato no conectado.');
-      return;
-    }
-    try {
-      // Llamar a la función 'points' del contrato que devuelve los puntos del usuario
-      const points = await contract.points(userAddress);
-
-    
-      return  points.toString(); // Convertir el BigNumber a un número
-    } catch (error: any) {
-      console.error('Error al obtener los puntos del usuario:', error.message || error);
-    }
-  };
-
   const redeemPointsForPack = async () => {
     if (!contract) {
       console.error('Contrato no conectado.');
@@ -492,7 +474,6 @@ export const useBetting = (): ContractAPI => {
   return {
     connectContract,
     placeBet,
-    redeemPointsForPack,
-    getPoints,
+    redeemPointsForPack
   };
 };

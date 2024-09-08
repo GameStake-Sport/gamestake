@@ -13,7 +13,7 @@ import type { Match as MatchType } from '@/shared/types/match'
 
 import { useBetting } from '@/hooks/useBetting'
 
-const matches: MatchType[] = [
+export const matches: MatchType[] = [
   {
     id: 1,
     team1: 'RM',
@@ -35,7 +35,7 @@ const matches: MatchType[] = [
     result2: 0,
   },
   {
-    id: 1,
+    id: 3,
     team1: 'MC',
     team2: 'MU',
     start: DateTime.now().plus({ hours: 2 }),
@@ -43,7 +43,7 @@ const matches: MatchType[] = [
     type: 'Soccer',
   },
   {
-    id: 1,
+    id: 4,
     team1: 'BFC',
     team2: 'MC',
     start: DateTime.now().minus({ hours: 2 }),
@@ -55,7 +55,7 @@ const matches: MatchType[] = [
 ]
 
 const Bets = () => {
-  const [selected, setSelected] = useState<string>('')
+  const [selected, setSelected] = useState<number>(-1)
   const { connectContract, placeBet } = useBetting(); // Hook para manejar apuestas
 
   useEffect(() => {
@@ -66,9 +66,9 @@ const Bets = () => {
     return matches.find(match => match.id === selected)
   }
 
-  const handleSelected = (matchId: string) => {
+  const handleSelected = (matchId: number) => {
     if (selected === matchId) {
-      setSelected('')
+      setSelected(-1)
       // reset fields
     }
     else setSelected(matchId)
@@ -87,14 +87,15 @@ const Bets = () => {
   
     console.log(selected, team1Bet, team2Bet)
 
-      // Llamar a la función de placeBet del contrato
     if (selected) {
       try {
         console.log('selected', selected)
-        await placeBet(parseInt(selected), 1, team1Bet); // Aquí se puede ajustar según el resultado seleccionado
+        await placeBet(selected, 1, team1Bet); // Aquí se puede ajustar según el resultado seleccionado
         alert('Apuesta realizada con éxito!');
       } catch (error) {
-        alert('Error al realizar la apuesta: ' + error.message);
+        alert('Error al realizar la apuesta: ' + error);
+      } finally {
+        setSelected(-1)
       }
     }
   }
@@ -110,7 +111,7 @@ const Bets = () => {
             <Match
               match={match}
               key={`${match.id}-${i}`}
-              onClick={(e) => handleSelected(e)}
+              onClick={(e) => handleSelected(parseInt(e))}
               focus={match.id === selected}
             />
           ))
@@ -122,12 +123,12 @@ const Bets = () => {
         <p className='text-white mb-8'>Now, do your magic:</p>
         <form onSubmit={handleSubmit}>
           <div className='w-full flex justify-center gap-x-7 items-center'>
-            <BetInput name='team1' label={selected ? Teams[findMatchSelected()?.team1 as string].name : 'Team 1'} disable={!selected}/>
+            <BetInput name='team1' label={(selected !== -1) ? Teams[findMatchSelected()?.team1 as string]?.name : 'Team 1'} disable={selected === -1}/>
             <p className='text-4xl text-white'>-</p>
-            <BetInput name='team2' label={selected ? Teams[findMatchSelected()?.team2 as string].name : 'Team 2'} disable={!selected}/>
+            <BetInput name='team2' label={(selected !== -1) ? Teams[findMatchSelected()?.team2 as string]?.name : 'Team 2'} disable={selected === -1}/>
           </div>
           <div className='w-full flex justify-center mt-6'>
-            <button disabled={!selected} className='relative px-12 py-3 rounded-xl bg-[#7747e5] text-white font-semibold transition-all duration-300 hover:bg-[#6a40d1]'>
+            <button disabled={selected === -1} className='relative px-12 py-3 rounded-xl bg-[#7747e5] text-white font-semibold transition-all duration-300 hover:bg-[#6a40d1]'>
                 Let's do it
             </button>
           </div>
