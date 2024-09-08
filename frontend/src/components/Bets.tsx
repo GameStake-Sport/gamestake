@@ -92,6 +92,7 @@ const Bets = () => {
         console.log('selected', selected)
         await placeBet(selected, 1, team1Bet); // Aquí se puede ajustar según el resultado seleccionado
         alert('Apuesta realizada con éxito!');
+        console.log('funciona')
       } catch (error) {
         alert('Error al realizar la apuesta: ' + error);
       } finally {
