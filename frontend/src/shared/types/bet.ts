@@ -1,6 +1,6 @@
 export interface Bet {
   id: string,
-  matchId: string,
+  matchId: number,
   result1: number,
   result2: number,
   money: number,

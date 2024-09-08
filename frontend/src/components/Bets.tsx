@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { DateTime } from 'luxon'
 
 // Local Modules
@@ -11,9 +11,11 @@ import { Teams } from '@/shared/assets/teams'
 // Types
 import type { Match as MatchType } from '@/shared/types/match'
 
+import { useBetting } from '@/hooks/useBetting';
+
 export const matches: MatchType[] = [
   {
-    id: 'match1',
+    id: 1,
     team1: 'RM',
     team2: 'MU',
     start: DateTime.now().minus({ hours: 1 }),  // Un partido que ya comenzó
@@ -23,7 +25,7 @@ export const matches: MatchType[] = [
     result2: 2,
   },
   {
-    id: 'match2',
+    id: 2,
     team1: 'BFC',
     team2: 'RM',
     start: DateTime.now().minus({ days: 1 }),
@@ -33,7 +35,7 @@ export const matches: MatchType[] = [
     result2: 0,
   },
   {
-    id: 'match3',
+    id: 3,
     team1: 'MC',
     team2: 'MU',
     start: DateTime.now().plus({ hours: 2 }),
@@ -41,7 +43,7 @@ export const matches: MatchType[] = [
     type: 'Soccer',
   },
   {
-    id: 'match4',
+    id: 4,
     team1: 'BFC',
     team2: 'MC',
     start: DateTime.now().minus({ hours: 2 }),
@@ -53,21 +55,26 @@ export const matches: MatchType[] = [
 ]
 
 const Bets = () => {
-  const [selected, setSelected] = useState<string>('')
+  const [selected, setSelected] = useState<number>(-1)
+  const { connectContract, placeBet } = useBetting(); // Hook para manejar apuestas
+
+  useEffect(() => {
+    connectContract(); // Conectar al contrato cuando se carga el componente
+  }, []);
 
   const findMatchSelected = (): MatchType | undefined => {
     return matches.find(match => match.id === selected)
   }
 
-  const handleSelected = (matchId: string) => {
+  const handleSelected = (matchId: number) => {
     if (selected === matchId) {
-      setSelected('')
+      setSelected(-1)
       // reset fields
     }
     else setSelected(matchId)
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
   
     const target = e.target as typeof e.target & {
@@ -79,6 +86,17 @@ const Bets = () => {
     const team2Bet = target.team2.value
   
     console.log(selected, team1Bet, team2Bet)
+
+      // Llamar a la función de placeBet del contrato
+    if (selected) {
+      try {
+        console.log('selected', selected)
+        await placeBet(selected, 1, team1Bet); // Aquí se puede ajustar según el resultado seleccionado
+        alert('Apuesta realizada con éxito!');
+      } catch (error) {
+        alert('Error al realizar la apuesta: ' + error);
+      }
+    }
   }
 
   return (
@@ -92,7 +110,7 @@ const Bets = () => {
             <Match
               match={match}
               key={`${match.id}-${i}`}
-              onClick={(e) => handleSelected(e)}
+              onClick={(e) => handleSelected(parseInt(e))}
               focus={match.id === selected}
             />
           ))
