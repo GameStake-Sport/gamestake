@@ -16,6 +16,7 @@
     "deploy:be": "cd backend && npm run deploy"
   },
   "dependencies": {
+    "@ethersproject/providers": "^5.7.2"
     "sonner": "^1.5.0"
   }
 }

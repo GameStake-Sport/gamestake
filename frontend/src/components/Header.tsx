@@ -5,6 +5,7 @@ import { useWallet } from '@/components/context/walletconexion';
 import Link from "next/link";
 
 
+
 export default function Header() {
     const { walletAddress, connectWallet, fetchPoints } = useWallet();
     const [userPoints, setUserPoints] = useState<any>(0); // Estado local para puntos del usuario
@@ -136,9 +137,14 @@ export default function Header() {
                         </div>
                     </Button>
                     {walletAddress ? (
-                        <Button className="rounded-full w-32 ml-10">
-                            <span className="m-3">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
-                        </Button>
+                        <div className="flex items-center space-x-2">
+                            <Button className="rounded-full w-32">
+                                <span className="m-3">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
+                            </Button>
+                            <Button className="rounded-full" onClick={disconnectWallet}>
+                                <span className="m-3">Disconnect</span>
+                            </Button>
+                        </div>
                     ) : (
                         <Button className="rounded-full w-32 ml-10" onClick={connectWallet}>
                             <span className="m-3">Connect Wallet</span>

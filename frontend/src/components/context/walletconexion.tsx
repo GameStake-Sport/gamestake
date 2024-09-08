@@ -1,11 +1,17 @@
 'use client'
-import React, { createContext, useState, useContext, useEffect, useCallback } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import { ethers } from 'ethers'; // Ensure correct import
+import { Web3Provider } from '@ethersproject/providers'; 
 import { useBetting } from '@/hooks/useBetting';
+
 
 interface WalletContextType {
   walletAddress: string | null;
   connectWallet: () => Promise<void>;
+  getSigner: () => Promise<ethers.Signer>;
+  disconnectWallet: () => void;
   fetchPoints: () => Promise<void>;
+
 }
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
@@ -18,7 +24,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
 
   const connectWallet = async () => {
-    if (window.ethereum) {
+    if (window.ethereum) { // Check if window and window.ethereum are defined
       try {
         const accounts = await window.ethereum.request({
           method: 'eth_requestAccounts',
@@ -45,6 +51,10 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   }, [walletAddress, getPoints]);
 
+  const disconnectWallet = () => {
+    setWalletAddress(null);
+  };
+
   useEffect(() => {
     // Check if wallet is already connected
     const checkConnection = async () => {
@@ -61,7 +71,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   return (
-    <WalletContext.Provider value={{ walletAddress, connectWallet, fetchPoints }}>
+    <WalletContext.Provider value={{ walletAddress, connectWallet, getSigner, disconnectWallet }}>
       {children}
     </WalletContext.Provider>
   );
@@ -73,4 +83,14 @@ export const useWallet = () => {
     throw new Error('useWallet must be used within a WalletProvider');
   }
   return context;
+};
+
+export const getSigner = async (): Promise<ethers.Signer> => {
+  if (window.ethereum) {
+    const provider = new Web3Provider(window.ethereum);  // Ensure 'providers' is accessible
+    const signer = provider.getSigner() as unknown as ethers.Signer; // Cast to unknown first
+    return signer;
+  } else {
+    throw new Error('MetaMask not detected');
+  }
 };
