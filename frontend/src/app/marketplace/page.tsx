@@ -23,12 +23,17 @@ const products = [
       },
 ];
 
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import { useBetting } from '@/hooks/useBetting';
+import { Toaster, toast } from 'sonner'
 
 
 export default function Marketplace() {
     const { connectContract, redeemPointsForPack } = useBetting();
+    const [loading, setLoading] = useState(false); // Estado de carga
+    const [nftsDelivered, setNftsDelivered] = useState(false); // Estado para manejar la entrega de NFTs
+
+
 
     // Conectar al contrato cuando se carga el componente
     useEffect(() => {
@@ -37,11 +42,19 @@ export default function Marketplace() {
 
       // Manejar la compra de un producto
   const handleBuy = async () => {
+    setLoading(true); // Mostrar loader
+    setNftsDelivered(false); // Resetear el estado de entrega de NFTs
     try {
       // Aquí pasar la dirección del contrato de GameStakeNFT para redimir el pack
+            // Llamar a la función del contrato para redimir puntos
       await redeemPointsForPack();
-      alert('Compra realizada con éxito!');
+
+      setLoading(false); // Quitar el loader cuando la transacción se confirme
+      setNftsDelivered(true); // Mostrar que los NFTs fueron entregados
+      toast.success('Compra realizada con éxito!'); // Mostrar notificación de
     } catch (error) {
+      setLoading(false); // Quitar el loader en caso de error
+      toast.error('Error al realizar la compra: ' + (error as Error).message); // Mostrar notificación de error
       alert('Error al realizar la compra: ' + (error as Error).message);
     }
   };
@@ -50,7 +63,14 @@ export default function Marketplace() {
     return(
         <div className="flex flex-col items-center justify-center min-h-screen  p-10">
         <h1 className="text-4xl font-bold  mb-10 text-white">Marketplace</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl w-full">
+        {loading && (
+        <div className="flex items-center justify-center space-x-2">
+            <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 border-t-transparent border-blue-600 rounded-full"></div>
+            <span className="text-blue-600 font-semibold">Procesando la compra...</span>
+        </div>
+        )}
+
+        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl w-full ${loading ? 'opacity-50 pointer-events-none' : ''}`}>
           {products.map((product) => (
             <div
               key={product.id}
@@ -70,6 +90,7 @@ export default function Marketplace() {
               >
                 Comprar
               </button>
+              <Toaster />
             </div>
           ))}
         </div>

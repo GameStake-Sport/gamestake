@@ -447,15 +447,8 @@ export const useBetting = (): ContractAPI => {
 
       console.log('Realizando apuesta...', weiAmount);
       const tx = await contract.placeBet(matchId, result, { value: weiAmount });
-      await tx.wait(); // Espera a que la transacción se confirme
-      console.log('Apuesta realizada con éxito!');
-
-      // Espera hasta que la transacción sea confirmada
-      const receipt = await tx.wait(); // Espera a que la transacción se confirme
-
-      // Accede a la propiedad 'confirmations' del recibo
-      console.log(`Transacción confirmada con ${receipt.confirmations} confirmaciones.`);
       
+      return tx;
     } catch (error) {
       console.error('Error al realizar la apuesta:', error);
     }
@@ -471,8 +464,8 @@ export const useBetting = (): ContractAPI => {
 
     try {
       const tx = await contract.redeemPointsForPack(gameStakeNFTContract);
-      await tx.wait();
       console.log('Pack redimido con éxito!');
+      return tx;
     } catch (error) {
       console.error('Error al redimir el pack:', error);
     }
