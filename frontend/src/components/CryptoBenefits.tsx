@@ -2,12 +2,13 @@ import React from 'react';
 
 const CryptoBenefits = () => {
     return (
-        <div className="mt-5 max-w-[1220px] mx-auto relative text-white">
-            <div className="flex flex-col lg:h-[459px] lg:flex-row lg:items-center mb-20">
+        <div className="max-w-[1220px] mx-auto relative text-white">
+            <div className="flex flex-col lg:h-[459px] lg:flex-row lg:items-center mb-32">
                 <div className="px-[10px] relative z-[1]">
-                    <h2 className="mt-5 font-header text-[34px] leading-[48px] md:text-[44px] md:leading-[56px]">
+                    <h2 className="mt-32 mb-5 font-header text-[34px] leading-[48px] md:text-[44px] md:leading-[56px]">
                         Dive into the best crypto betting experience
                     </h2>
+                    <p>Welcome to our minimalistic and captivating platform, designed to help you build your ideal NFT team.</p>
                     <button className="relative px-12 py-3 rounded-xl bg-[#7747e5] text-white font-semibold transition-all duration-300 hover:bg-[#6a40d1] mt-10">
                         Start playing
                     </button>
@@ -19,11 +20,11 @@ const CryptoBenefits = () => {
                     height="460"
                     decoding="async"
                     className="self-end w-full relative -right-5 -mt-12 -bottom-12 lg:right-0 lg:bottom-0 max-w-[700px] lg:max-w-[550px]"
-                    src="images/illustration.webp"
+                    src="images/image3.png"
                 />
             </div>
 
-            <div className="flex gap-3 overflow-x-auto px-[10px] no-scrollbar">
+            <div className="flex gap-3 overflow-x-auto px-[10px] no-scrollbar mb-32">
                 <div role="button" className="w-[291px] min-h-[100px] shrink-0 flex items-center gap-3 p-4 bg-white-5 rounded-[20px] backdrop-blur-30 group duration-300 hover:bg-white-10 hover:dex-outline">
                     <img src="images/no-kyc.webp" className="w-[60px] h-[60px]" alt="No KYC" />
                     <div className="flex flex-col gap-1 justify-between">

@@ -49,7 +49,7 @@ const BenefitsList: React.FC = () => {
                     key={index}
                     role={benefit.link ? 'link' : 'button'}
                     className="w-[291px] min-h-[100px] shrink-0 flex items-center gap-3 p-4 bg-white-5 rounded-[20px] backdrop-blur-30 group duration-300 hover:bg-white-10 hover:dex-outline"
-                    onClick={() => handleClick(benefit.link)}  // Manejador de evento
+                    onClick={() => handleClick(benefit.link)}
                 >
                     <img
                         src={benefit.imgSrc}
