@@ -62,38 +62,38 @@ export default function Marketplace() {
 
     return(
         <div className="flex flex-col items-center justify-center min-h-screen  p-10">
-        <h1 className="text-4xl font-bold  mb-10 text-white">Marketplace</h1>
-        {loading && (
-        <div className="flex items-center justify-center space-x-2">
-            <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 border-t-transparent border-blue-600 rounded-full"></div>
-            <span className="text-blue-600 font-semibold">Procesando la compra...</span>
-        </div>
-        )}
+          <h1 className="text-4xl font-bold  mb-10 text-white">Marketplace</h1>
+          {loading && (
+          <div className="flex items-center justify-center space-x-2">
+              <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 border-t-transparent border-blue-600 rounded-full"></div>
+              <span className="text-blue-600 font-semibold">Procesando la compra...</span>
+          </div>
+          )}
 
-        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl w-full ${loading ? 'opacity-50 pointer-events-none' : ''}`}>
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-40 object-cover rounded-md mb-4 p h-fit"
-              />
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{product.name}</h2>
-              <p className="text-gray-600 mb-4">{product.description}</p>
-              <p className="text-xl font-bold text-gray-700 mb-6">Price: {product.price} points</p>
-              <button
-                onClick={() => handleBuy()}
-                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+          <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl w-full ${loading ? 'opacity-50 pointer-events-none' : ''}`}>
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center"
               >
-                Comprar
-              </button>
-              <Toaster />
-            </div>
-          ))}
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-40 object-cover rounded-md mb-4 p h-fit"
+                />
+                <h2 className="text-2xl font-semibold text-gray-800 mb-2">{product.name}</h2>
+                <p className="text-gray-600 mb-4">{product.description}</p>
+                <p className="text-xl font-bold text-gray-700 mb-6">Price: {product.price} points</p>
+                <button
+                  onClick={() => handleBuy()}
+                  className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Comprar
+                </button>
+                <Toaster />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
     );
 }
