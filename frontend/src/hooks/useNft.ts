@@ -16,7 +16,7 @@ const useNFTs = (walletAddress: string | null) => {
   const [error, setError] = useState<string | null>(null);
 
   // Configuración para conectarse a Sepolia a través de Alchemy
-  const provider = new ethers.JsonRpcProvider('https://eth-sepolia.g.alchemy.com/v2/fLd8Mq4o6yKG3U_29t7Vbgxnw-FqU5U9');
+  const provider = new ethers.JsonRpcProvider('https://spicy-rpc.chiliz.com/');
 
   // ABI del contrato ERC-1155 para obtener balance y URI de los tokens
   const nftContractABI = [
