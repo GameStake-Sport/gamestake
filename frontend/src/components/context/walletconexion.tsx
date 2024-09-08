@@ -1,15 +1,21 @@
 'use client'
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext, useEffect, useCallback } from 'react';
+import { useBetting } from '@/hooks/useBetting';
 
 interface WalletContextType {
   walletAddress: string | null;
   connectWallet: () => Promise<void>;
+  fetchPoints: () => Promise<void>;
 }
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
 
 export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
+  const [points, setPoints] = useState<number>(0);
+
+  const { connectContract, getPoints } = useBetting();
+
 
   const connectWallet = async () => {
     if (window.ethereum) {
@@ -26,6 +32,20 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   };
 
+  const fetchPoints = useCallback(async () => {
+    if (!walletAddress) return;
+
+    try {
+      const userPoints = await getPoints(walletAddress); // Obtener puntos usando el hook `useBetting`
+      if (userPoints !== undefined) {
+        setPoints(userPoints);
+        return userPoints;
+      }
+    } catch (error) {
+      console.error('Error fetching points', error);
+    }
+  }, [walletAddress, getPoints]);
+
   useEffect(() => {
     // Check if wallet is already connected
     const checkConnection = async () => {
@@ -33,6 +53,8 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         const accounts = await window.ethereum.request({ method: 'eth_accounts' });
         if (accounts.length > 0) {
           setWalletAddress(accounts[0]);
+
+          await connectContract();
         }
       }
     };
@@ -40,7 +62,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   return (
-    <WalletContext.Provider value={{ walletAddress, connectWallet }}>
+    <WalletContext.Provider value={{ walletAddress, connectWallet, fetchPoints }}>
       {children}
     </WalletContext.Provider>
   );

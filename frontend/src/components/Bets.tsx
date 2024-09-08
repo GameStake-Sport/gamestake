@@ -11,7 +11,7 @@ import { Teams } from '@/shared/assets/teams'
 // Types
 import type { Match as MatchType } from '@/shared/types/match'
 
-import { useBetting } from '@/hooks/useBetting';
+import { useBetting } from '@/hooks/useBetting'
 
 export const matches: MatchType[] = [
   {
@@ -87,7 +87,6 @@ const Bets = () => {
   
     console.log(selected, team1Bet, team2Bet)
 
-      // Llamar a la función de placeBet del contrato
     if (selected) {
       try {
         console.log('selected', selected)
@@ -95,6 +94,8 @@ const Bets = () => {
         alert('Apuesta realizada con éxito!');
       } catch (error) {
         alert('Error al realizar la apuesta: ' + error);
+      } finally {
+        setSelected(-1)
       }
     }
   }
@@ -122,12 +123,12 @@ const Bets = () => {
         <p className='text-white mb-8'>Now, do your magic:</p>
         <form onSubmit={handleSubmit}>
           <div className='w-full flex justify-center gap-x-7 items-center'>
-            <BetInput name='team1' label={selected ? Teams[findMatchSelected()?.team1 as string].name : 'Team 1'} disable={!selected}/>
+            <BetInput name='team1' label={(selected !== -1) ? Teams[findMatchSelected()?.team1 as string]?.name : 'Team 1'} disable={selected === -1}/>
             <p className='text-4xl text-white'>-</p>
-            <BetInput name='team2' label={selected ? Teams[findMatchSelected()?.team2 as string].name : 'Team 2'} disable={!selected}/>
+            <BetInput name='team2' label={(selected !== -1) ? Teams[findMatchSelected()?.team2 as string]?.name : 'Team 2'} disable={selected === -1}/>
           </div>
           <div className='w-full flex justify-center mt-6'>
-            <button disabled={!selected} className='relative px-12 py-3 rounded-xl bg-[#7747e5] text-white font-semibold transition-all duration-300 hover:bg-[#6a40d1]'>
+            <button disabled={selected === -1} className='relative px-12 py-3 rounded-xl bg-[#7747e5] text-white font-semibold transition-all duration-300 hover:bg-[#6a40d1]'>
                 Let's do it
             </button>
           </div>

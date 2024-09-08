@@ -3,9 +3,23 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { useWallet } from '@/components/context/walletconexion';
+import { useBetting } from "@/hooks/useBetting";
+import { connect } from "http2";
 
 export default function Header() {
-    const { walletAddress, connectWallet } = useWallet();
+    const { walletAddress, connectWallet, fetchPoints } = useWallet();
+    const [userPoints, setUserPoints] = useState<any>(0); // Estado local para puntos del usuario
+
+    // Llama a fetchPoints cuando la billetera esté conectada y actualiza el estado de los puntos
+    useEffect(() => {
+      const getPoints = async () => {
+        if (walletAddress) {
+          const points = await fetchPoints(); // Llamada a fetchPoints del contexto
+          setUserPoints(points); // Actualiza el estado local de puntos
+        }
+      };
+      getPoints();
+    }, [walletAddress, fetchPoints]); // Dependencia de walletAddress
 
     return (
         <header className="fixed top-0 w-full bg-custom-bg z-50">
@@ -94,7 +108,7 @@ export default function Header() {
                     <Button className="rounded-full">
                         <div className="h-[40px] w-auto pl-2 pr-1 flex flex-row items-center bg-white-5 rounded-full relative mr-[12px]">
                             <span className="ml-2 text-base text-white font-semibold">
-                                0.00
+                                <span className="m-3">{userPoints} Points</span>
                             </span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
