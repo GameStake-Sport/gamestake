@@ -15,7 +15,7 @@ import { useBetting } from '@/hooks/useBetting'
 
 export const matches: MatchType[] = [
   {
-    id: 1,
+    id: 111,
     team1: 'RM',
     team2: 'MU',
     start: DateTime.now().minus({ hours: 1 }),  // Un partido que ya comenzó
@@ -25,7 +25,7 @@ export const matches: MatchType[] = [
     result2: 2,
   },
   {
-    id: 2,
+    id: 222,
     team1: 'BFC',
     team2: 'RM',
     start: DateTime.now().minus({ days: 1 }),
@@ -92,6 +92,7 @@ const Bets = () => {
         console.log('selected', selected)
         await placeBet(selected, 1, team1Bet); // Aquí se puede ajustar según el resultado seleccionado
         alert('Apuesta realizada con éxito!');
+        console.log('funciona')
       } catch (error) {
         alert('Error al realizar la apuesta: ' + error);
       } finally {

@@ -4,7 +4,7 @@ import type { Bet } from '@/shared/types/bet'
 const myBets: Bet[] = [
   {
     id: 'bet1',
-    matchId: 1,
+    matchId: 111,
     result1: 1,
     result2: 2,
     money: 0,
@@ -14,7 +14,7 @@ const myBets: Bet[] = [
   },
   {
     id: 'bet2',
-    matchId: 2,
+    matchId: 222,
     result1: 2,
     result2: 2,
     money: 10,
