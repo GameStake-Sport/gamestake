@@ -11,7 +11,7 @@ import { Teams } from '@/shared/assets/teams'
 // Types
 import type { Match as MatchType } from '@/shared/types/match'
 
-const matches: MatchType[] = [
+export const matches: MatchType[] = [
   {
     id: 'match1',
     team1: 'RM',
